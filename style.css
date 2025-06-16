@@ -1,0 +1,1128 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+* a{
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  position: sticky; /* Changed from relative */
+  top: 0; /* Required for sticky positioning */
+  border-bottom: 1px solid grey;
+  z-index: 1000; /* Increased z-index */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added subtle shadow */
+}
+
+/* Rest of your existing CSS remains unchanged */
+.nav-container{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav>ul{
+  display: flex;
+  gap: 10px;
+}
+
+nav>ul>li{
+  list-style: none;
+  padding: 30px;
+  padding-top: 50px;
+}
+
+nav>ul>li>a{
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+nav>ul>li>a:hover{
+  text-decoration: underline;
+}
+
+.megamenu{
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 2px 1px 1px rgb(56, 56, 56);
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+/* ... rest of your existing styles remain the same ... */
+
+.megamenuItems>ul>li{
+  list-style: none;
+  padding: 10px;
+}
+.megamenuItems>h3{
+  font-size: 40px;
+  font-weight: bold;
+  list-style: none;
+  padding: 10px;
+}
+
+.megamenuItems {
+  display: block;
+}
+
+.megamenuItems h3 {
+  padding: 10px;
+}
+
+.megamenuItems ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.megamenuItems ul li {
+  list-style: none;
+
+}
+
+nav ul li:hover .megamenu{
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li:hover{
+  /* text-decoration: underline */
+}
+nav ul li:hover a{
+  color: black;
+}
+nav ul li:hover .megamenu>div{
+  width: 20%;
+  /* padding: 20px; */
+}
+nav ul li:hover .megamenu>div>h3{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subitems{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+.subitems>ul{
+  display: flex;
+  flex-direction: column;
+  padding-left: 4.5em;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.subitems>ul>li{
+  text-decoration: none;
+  padding: 0;
+}
+
+.subitems>ul>li>a{
+  font-size: 13px;
+
+}
+
+.subitems ul li a:hover{
+  text-decoration: underline;
+}
+
+.megamenuItems>ul>li>a{
+  padding-left: 3.5em;
+  font-size: 20px;
+}
+
+.brandImages img{
+  width: 200px;
+  height: 150px;
+  transform: translateX(50px);
+
+}
+
+
+
+
+/* Popup */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  display: flex;
+  width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.modal-left {
+  flex: 1 1 45%;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-right {
+  flex: 1 1 55%;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.petmate-logo {
+  width: 90px;
+  margin-bottom: 18px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+h2 {
+  margin: 0 0 18px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+#signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1760a5;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.signup-btn:hover {
+  background: #104d80;
+}
+
+.no-thanks-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero{
+height: 550px;
+}
+
+.hero img{
+width: 300px;
+height: 200px;
+}
+
+.belowFlag{
+transform: translateY(-550px);
+margin: 100px;
+}
+
+.belowFlag h3{
+font-size: 65px;
+}
+
+.belowFlag h2{
+font-size: 100px;
+
+}
+
+.heroSentence p{
+font-size: 40px;
+transform: translateY(-800px);
+margin-left: 500px;
+}
+
+.headingLine{
+background-color: black;
+width: 100%;
+height: 30px;
+padding-top: 5px;
+}
+
+.headingLine p{
+color: white;
+text-align: center;
+}
+
+.hero a{
+text-decoration: none;
+color: white;
+font-weight: bolder;
+background-color: red;
+padding: 10px 20px;
+border-radius: 1.3rem;
+font-size: 20px;
+margin-left: 800px;
+display: inline-block;
+transform: translateY(-800px);
+}
+
+.bestProducts h3{
+font-size: 60px;
+font-weight: 200;
+text-align: center;
+margin-top: -0.7em;
+}
+
+#bestProducts{
+display: flex;
+margin: 2em;
+gap: 2em;
+margin-top: 6em;
+}
+
+#bestProducts img{
+width: 300px;
+height: 300px;
+transition: all 0.3s ease-in-out;
+}
+
+#bestProducts img:hover{
+transform: scale(1.05);
+}
+
+#bestProducts h4{
+text-align: center;
+}
+
+#bestProducts .rating{
+margin-top: 0.5em;
+text-align: center;
+}
+
+#bestProducts .price{
+text-align: center;
+color: gray;
+margin-top: -0.9em;
+}
+
+.popularBrands h3{
+font-size: 50px;
+font-weight: 200;
+text-align: center;
+}
+
+#brands{
+display: flex;
+justify-content: space-evenly;
+gap: 0.1em;
+}
+
+#brands img{
+width: 520px;
+height: 520px;
+margin-top: 1em;
+
+}
+
+#brands h2{
+text-align: center;
+font-size: 35px;
+font-weight: 500;
+
+}
+
+#brands p{
+text-align: center;
+font-size: 1em;
+
+}
+
+#brands a{
+text-decoration: none;
+color: black;
+display: block;
+text-align: center;
+
+
+}
+
+#brands a:hover{
+text-decoration: underline;
+}
+
+.socials h2{
+font-size: 50px;
+font-weight: 200;
+text-align: center;
+margin-top: 1.3em;
+}
+
+.communities{
+display: flex;
+justify-content: space-evenly;
+}
+
+.communities img{
+width: 520px;
+height: 500px;
+}
+
+.community h3{
+text-align: center;
+font-size: 35px;
+font-weight: 300;
+}
+
+.blogHeader h3{
+font-size: 20px;
+text-align: center;
+margin-top: 5em;
+color: rgb(53, 98, 181);
+font-weight: 600;
+}
+
+.blogs_section>h2{
+font-size: 50px;
+font-weight: 200;
+text-align: center;
+margin-top: 1.3em;
+}
+
+.blogs_section>a{
+display: block;
+text-align: end;
+padding-right: 50px;
+}
+
+.blogs_section>a:hover{
+text-decoration: underline;
+}
+
+#blogs{
+display: flex;
+justify-content: space-evenly;
+margin: 10px;
+gap: 4px;
+}
+
+#blogs img{
+width: 500px;
+height: 430px;
+margin-top: 1em;
+}
+
+#blogs h2{
+font-size: 30px;
+font-weight: 300;
+}
+
+#blogs h6{
+font-size: 15px;
+font-weight: 300;
+}
+
+.blog p{
+font-size: 15px;
+font-weight: 200;
+}
+
+.readMore{
+color: rgb(53, 98, 181);
+text-decoration: underline;
+}
+
+.offer h2{
+font-size: 50px;
+font-weight: 200;
+text-align: center;
+margin-top: 1.3em;
+}
+
+.offer h4{
+font-size: 25px;
+font-weight: 300;
+text-align: center;
+}
+
+.offer #email{
+margin-left: 500px;
+margin-top: 50px;
+color: black;
+font-size: 20px;
+border: none;
+border-bottom: 2px solid black;
+width: 700px;
+padding: 5px;
+}
+
+.offer #email:focus{
+outline: none;
+background-color: lightgrey;
+height: 30px;
+padding: 10px;
+}
+
+.offer #email::placeholder {
+color: rgb(0, 0, 0);
+transition: transform 0.3s;
+
+}
+
+.offer #email {
+position: relative;
+}
+
+.offer #email:focus::placeholder {
+transform: translate(-5px, -33px);
+font-size: 20px;
+color: gray;
+}
+
+.offer p{
+font-size: 15px;
+color: gray;
+text-align: center;
+margin-top: 20px;
+}
+
+/* footer */
+
+footer{
+background-color: rgb(53, 98, 181);
+height: 100%;
+margin-top: 150px;
+}
+
+.categories{
+display: flex;
+justify-content: space-evenly;
+padding: 20px;
+}
+
+.categories h2{
+font-size: 30px;
+font-weight: 300;
+text-align: center;
+
+}
+
+.categories ul li{
+list-style: none;
+}
+
+.categories ul li a:hover{
+text-decoration: underline;
+}
+
+.subcategories{
+display: flex;
+justify-self: start;
+flex-direction: column;
+align-items: start;
+color: white;
+}
+
+.subcategories ul li{
+padding-top: 10px;
+}
+
+.subcategories ul li a {
+color: white;
+padding-top: 10px;
+}
+
+.socials{
+display: flex;
+flex-direction: column;
+padding: 20px;
+}
+
+.socialAcc a{
+padding: 0;
+
+}
+
+.screenRead{
+color: white;
+margin: 15px;
+}
+
+.screenRead strong{
+font-weight: 400;
+}
+
+.terms a{
+display: block;
+color: white;
+font-size: 10px;
+text-align: center;
+margin: 100px 0 50px 0;
+}
+
+/* ADOPT Dogs */
+.dogAdopt-container {
+display: flex;
+min-height: 100vh;
+background: #fff;
+}
+.dogAdopt-sidebar {
+width: 250px;
+background: #fff;
+border-right: 2px solid #222;
+padding: 36px 18px 0 36px;
+box-sizing: border-box;
+}
+.dogAdopt-filter-title {
+font-size: 3em;
+margin: 0 0 30px 0;
+letter-spacing: 1px;
+font-weight: normal;
+}
+.dogAdopt-filter-list {
+font-size: 1.1em;
+margin-left: 6px;
+margin-bottom: 18px;
+color: #222;
+letter-spacing: 1px;
+line-height: 1.7;
+}
+.dogAdopt-filter-label {
+font-size: 1.1em;
+margin-bottom: 8px;
+display: block;
+font-weight: bold;
+}
+#dogAdopt-breed-filter,
+#dogAdopt-age-filter,
+#dogAdopt-gender-filter {
+width: 90%;
+font-size: 1em;
+margin-bottom: 18px;
+padding: 5px 6px;
+border-radius: 4px;
+border: none;
+}
+.dogAdopt-main-content {
+flex: 1;
+padding: 40px 32px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: #fff;
+}
+.dogAdopt-dog-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 32px;
+width: 100%;
+}
+.dogAdopt-dog-card {
+/* background: #bdbdbd; */
+/* border-radius: 18px; */
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+min-width: 200px;
+}
+
+.dogAdopt-dog-img {
+width: 320px;         
+height: 260px;        
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+margin: 10px;
+}
+
+.dogAdopt-dog-img img {
+width: 90%;
+height: 100%;
+object-fit: fill;
+display: block;
+/* border-radius: 1em; */
+}
+
+
+
+.dogAdopt-dog-details {
+width: 90%;
+padding: 18px 0 0 0;
+font-size: 1.3em;
+color: #222;
+min-height: 90px;
+background: none;
+}
+.dogAdopt-dog-details div {
+margin-bottom: 4px;
+}
+.dogAdopt-enquire-btn {
+margin: 18px 0 14px 0;
+width: 90%;
+background: #85aada;
+color: #222;
+border: none;
+border-radius: 12px;
+padding: 12px 0;
+font-size: 1.1em;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.2s;
+}
+.dogAdopt-enquire-btn:hover {
+background: #0288d1;
+color: #fff;
+}
+@media (max-width: 1200px) {
+.dogAdopt-dog-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 800px) {
+.dogAdopt-container {
+  flex-direction: column;
+}
+.dogAdopt-sidebar {
+  width: 100%;
+  border-right: none;
+  border-bottom: 2px solid #222;
+  padding: 24px 12px 0 24px;
+}
+.dogAdopt-main-content {
+  padding: 20px;
+}
+.dogAdopt-dog-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+/* Cats Adopt */
+.catAdopt-container {
+display: flex;
+min-height: 100vh;
+background: #fff;
+}
+.catAdopt-sidebar {
+width: 250px;
+background: #fff;
+border-right: 2px solid #222;
+padding: 36px 18px 0 36px;
+box-sizing: border-box;
+}
+.catAdopt-filter-title {
+font-size: 3em;
+margin: 0 0 30px 0;
+letter-spacing: 1px;
+font-weight: normal;
+}
+.catAdopt-filter-list {
+font-size: 1.1em;
+margin-left: 6px;
+margin-bottom: 18px;
+color: #222;
+letter-spacing: 1px;
+line-height: 1.7;
+}
+.catAdopt-filter-label {
+font-size: 1.1em;
+margin-bottom: 8px;
+display: block;
+font-weight: bold;
+}
+#catAdopt-breed-filter,
+#catAdopt-age-filter,
+#catAdopt-gender-filter {
+width: 90%;
+font-size: 1em;
+margin-bottom: 18px;
+padding: 5px 6px;
+border-radius: 4px;
+border: none;
+}
+.catAdopt-main-content {
+flex: 1;
+padding: 40px 32px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: #fff;
+}
+.catAdopt-cat-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 32px;
+width: 100%;
+}
+.catAdopt-cat-card {
+/* background: #bdbdbd; */
+/* border-radius: 18px; */
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+min-width: 200px;
+}
+.catAdopt-cat-img {
+width: 320px;         
+height: 260px;        
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+margin: 10px;
+}
+
+.catAdopt-cat-img img {
+width: 90%;
+height: 100%;
+object-fit: fill;
+display: block;
+}
+
+.catAdopt-cat-details {
+width: 90%;
+padding: 18px 0 0 0;
+font-size: 1.3em;
+color: #222;
+min-height: 90px;
+background: none;
+}
+
+.catAdopt-cat-details div {
+margin-bottom: 4px;
+}
+.catAdopt-enquire-btn {
+margin: 18px 0 14px 0;
+width: 90%;
+background: #4fc3f7;
+color: #222;
+border: none;
+border-radius: 12px;
+padding: 12px 0;
+font-size: 1.1em;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.2s;
+}
+.catAdopt-enquire-btn:hover {
+background: #0288d1;
+color: #fff;
+}
+@media (max-width: 1200px) {
+.catAdopt-cat-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 800px) {
+.catAdopt-container {
+  flex-direction: column;
+}
+.catAdopt-sidebar {
+  width: 100%;
+  border-right: none;
+  border-bottom: 2px solid #222;
+  padding: 24px 12px 0 24px;
+}
+.catAdopt-main-content {
+  padding: 20px;
+}
+.catAdopt-cat-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+/* birds adopt */
+.birdAdopt-container {
+display: flex;
+min-height: 100vh;
+background: #fff;
+}
+.birdAdopt-sidebar {
+width: 250px;
+background: #fff;
+border-right: 2px solid #222;
+padding: 36px 18px 0 36px;
+box-sizing: border-box;
+}
+.birdAdopt-filter-title {
+font-size: 3em;
+margin: 0 0 30px 0;
+letter-spacing: 1px;
+font-weight: normal;
+}
+.birdAdopt-filter-list {
+font-size: 1.1em;
+margin-left: 6px;
+margin-bottom: 18px;
+color: #222;
+letter-spacing: 1px;
+line-height: 1.7;
+}
+.birdAdopt-filter-label {
+font-size: 1.1em;
+margin-bottom: 8px;
+display: block;
+font-weight: bold;
+}
+#birdAdopt-species-filter,
+#birdAdopt-age-filter,
+#birdAdopt-gender-filter {
+width: 90%;
+font-size: 1em;
+margin-bottom: 18px;
+padding: 5px 6px;
+border-radius: 4px;
+border: none;
+}
+.birdAdopt-main-content {
+flex: 1;
+padding: 40px 32px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: #fff;
+}
+.birdAdopt-bird-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 32px;
+width: 100%;
+}
+.birdAdopt-bird-card {
+/* background: #bdbdbd; */
+border-radius: 18px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+min-width: 200px;
+}
+.birdAdopt-bird-img {
+width: 320px;
+height: 260px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+margin: 10px;
+border-radius: 18px 18px 0 0;
+}
+.birdAdopt-bird-img img {
+width: 90%;
+height: 100%;
+object-fit: fill;
+display: block;
+}
+.birdAdopt-bird-details {
+width: 90%;
+padding: 18px 0 0 0;
+font-size: 1.3em;
+color: #222;
+min-height: 90px;
+background: none;
+}
+.birdAdopt-bird-details div {
+margin-bottom: 4px;
+}
+.birdAdopt-enquire-btn {
+margin: 18px 0 14px 0;
+width: 90%;
+background: #4fc3f7;
+color: #222;
+border: none;
+border-radius: 12px;
+padding: 12px 0;
+font-size: 1.1em;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.2s;
+}
+.birdAdopt-enquire-btn:hover {
+background: #0288d1;
+color: #fff;
+}
+@media (max-width: 1200px) {
+.birdAdopt-bird-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 800px) {
+.birdAdopt-container {
+  flex-direction: column;
+}
+.birdAdopt-sidebar {
+  width: 100%;
+  border-right: none;
+  border-bottom: 2px solid #222;
+  padding: 24px 12px 0 24px;
+}
+.birdAdopt-main-content {
+  padding: 20px;
+}
+.birdAdopt-bird-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+
+/* Adoption Application form */
+.petAdoptApp-form {
+max-width: 700px;
+margin: 30px auto;
+background: #f7f7f7;
+padding: 32px 24px;
+border-radius: 18px;
+box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+font-family: Arial, sans-serif;
+}
+.petAdoptApp-form h2 {
+font-size: 1.5em;
+margin: 28px 0 10px 0;
+color: #0288d1;
+border-bottom: 1px solid #bdbdbd;
+padding-bottom: 4px;
+}
+.petAdoptApp-section {
+margin-bottom: 18px;
+display: flex;
+flex-wrap: wrap;
+gap: 18px 24px;
+}
+.petAdoptApp-section label {
+flex: 1 1 320px;
+display: flex;
+flex-direction: column;
+font-size: 1em;
+margin-bottom: 8px;
+color: #222;
+}
+.petAdoptApp-form input[type="text"],
+.petAdoptApp-form input[type="email"],
+.petAdoptApp-form input[type="tel"],
+.petAdoptApp-form input[type="number"],
+.petAdoptApp-form textarea,
+.petAdoptApp-form select {
+padding: 8px;
+border: 1px solid #bbb;
+border-radius: 6px;
+font-size: 1em;
+margin-top: 4px;
+background: #fff;
+resize: vertical;
+}
+.petAdoptApp-form textarea {
+min-height: 38px;
+max-height: 120px;
+}
+.petAdoptApp-form input[type="checkbox"] {
+margin-right: 8px;
+width: 18px;
+height: 18px;
+accent-color: #0288d1;
+}
+.petAdoptApp-submit-btn {
+margin-top: 18px;
+background: #4fc3f7;
+color: #222;
+border: none;
+border-radius: 12px;
+padding: 14px 0;
+width: 100%;
+font-size: 1.2em;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.2s;
+}
+.petAdoptApp-submit-btn:hover {
+background: #0288d1;
+color: #fff;
+}
+.petAdoptApp-form input:invalid,
+.petAdoptApp-form select:invalid,
+.petAdoptApp-form textarea:invalid {
+border-color: #f44336;
+}
+@media (max-width: 800px) {
+.petAdoptApp-form {
+  padding: 16px 4px;
+}
+.petAdoptApp-section label {
+  flex-basis: 100%;
+}
+}
+
+
+

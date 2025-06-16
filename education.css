@@ -1,0 +1,101 @@
+
+.edu-blogs_section>h2{
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 1.3em;
+  }
+  
+  .blogs_section>a{
+    display: block;
+    text-align: end;
+    padding-right: 50px;
+  }
+  
+  .blogs_section>a:hover{
+    text-decoration: underline;
+  }
+  
+  #blogs{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 4px;
+  }
+  
+  #blogs img{
+    width: 500px;
+    height: 430px;
+    margin-top: 1em;
+  }
+  
+  .blogs h2{
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .blogs h6{
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .blog p{
+    font-size: 15px;
+    font-weight: 200;
+  }
+  
+  .readMore{
+    color: rgb(53, 98, 181);
+    text-decoration: underline;
+  }
+
+  .hero-img img{
+    width: 100%;
+  }
+
+  #vlogs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px; /* space between videos */
+    justify-content: center;
+    align-items: flex-start;
+    margin: 32px 0;
+  }
+  
+  #vlogs iframe {
+    flex: 1 1 350px; /* grow, shrink, min width */
+    max-width: 400px;
+    min-width: 280px;
+    height: 225px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(55,108,177,0.10);
+    border: none;
+    background: #000;
+  }
+
+  #vlogs h2{
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  /* Responsive: Stack on small screens */
+  @media (max-width: 1300px) {
+    #vlogs iframe {
+      max-width: 320px;
+      height: 180px;
+    }
+  }
+  @media (max-width: 900px) {
+    #vlogs {
+      flex-direction: column;
+      align-items: center;
+    }
+    #vlogs iframe {
+      width: 98vw;
+      max-width: 98vw;
+      min-width: 0;
+      height: 200px;
+    }
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="userreg-container">
+        <form class="userreg-form" id="userreg-form">
+            <h1 class="userreg-title">Create Your Account</h1>
+            <div class="userreg-group">
+                <label for="userreg-name">Full Name *</label>
+                <input type="text" id="userreg-name" required>
+            </div>
+            <div class="userreg-group">
+                <label for="userreg-email">Email Address *</label>
+                <input type="email" id="userreg-email" required>
+            </div>
+            <div class="userreg-group">
+                <label for="userreg-phone">Phone Number *</label>
+                <input type="tel" id="userreg-phone" required>
+            </div>
+            <div class="userreg-group">
+                <label for="userreg-password">Password *</label>
+                <input type="password" id="userreg-password" required minlength="6">
+            </div>
+            <div class="userreg-group">
+                <label for="userreg-confirm">Confirm Password *</label>
+                <input type="password" id="userreg-confirm" required minlength="6">
+            </div>
+            <button type="submit" class="userreg-btn">Register</button>
+            <div class="userreg-login-link">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.getElementById('userreg-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const pwd = document.getElementById('userreg-password').value;
+        const confirm = document.getElementById('userreg-confirm').value;
+        if (pwd !== confirm) {
+            alert('Passwords do not match!');
+            return;
+        }
+        // Here you would send the data to your backend
+        alert('Registration successful!');
+        window.location.href = 'index.html';
+        this.reset();
+    });
+</script>
+
+</html>

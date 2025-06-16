@@ -1,0 +1,137 @@
+/* Modern Glassmorphism Styles */
+/* body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e6f6 0%, #f4f8fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+} */
+
+.application-wrapper {
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(55, 108, 177, 0.12);
+    width: 100%;
+    max-width: 680px;
+    padding: 48px 40px;
+    color: #222;
+    box-sizing: border-box;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #376cb1;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+    font-size: 2.4rem;
+}
+
+.plan-display {
+    text-align: center;
+    font-weight: 700;
+    color: #376cb1;
+    margin-bottom: 32px;
+    font-size: 1.2rem;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(55, 108, 177, 0.15);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #376cb1;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #c2d0ea;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #376cb1;
+    box-shadow: 0 0 0 3px rgba(55, 108, 177, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.submit-section {
+    text-align: center;
+    margin-top: 32px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #376cb1 0%, #4f8cfb 100%);
+    color: white;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(55, 108, 177, 0.3);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 32px rgba(55, 108, 177, 0.4);
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-wrapper {
+        padding: 32px 24px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+

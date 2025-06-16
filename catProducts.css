@@ -1,0 +1,250 @@
+main.catshop-body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #222;
+  }
+  
+  .catshop-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .cat-img img {
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  .catshop-sidebar {
+    width: 260px;
+    background: #f7f8fa;
+    padding: 32px 24px 24px 32px;
+    border-right: 1px solid #e0e0e0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+  }
+  
+  .catshop-sidebar-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  
+  .catshop-filter-group {
+    margin-bottom: 24px;
+  }
+  
+  .catshop-filter-label {
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  .catshop-filter-option {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .catshop-filter-checkbox {
+    margin-right: 8px;
+  }
+  
+  /* Main Content */
+  .catshop-main {
+    flex: 1;
+    padding: 40px 48px 48px 48px;
+    box-sizing: border-box;
+    background: #fff;
+    min-height: 100vh;
+  }
+  
+  .catshop-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    width: 100%;
+  }
+  
+  .catshop-product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px 20px 20px 20px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+  }
+  
+  .catshop-product-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    transform: translateY(-3px);
+  }
+  
+  .catshop-badge-free {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: #00b894;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 3px 14px;
+    border-radius: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .catshop-product-img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    align-self: center;
+  }
+  
+  .catshop-product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+  
+  .catshop-product-price {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  
+  .catshop-add-to-cart {
+    background: #3487e0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.2s;
+  }
+  .catshop-add-to-cart:hover {
+    background: #1419c0;
+  }
+  
+  /* Cart Styles */
+  .catshop-cart {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    border-radius: 14px;
+    padding: 22px 20px 18px 20px;
+    width: 320px;
+    z-index: 100;
+    min-height: 120px;
+  }
+  
+  .catshop-cart h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+  }
+  
+  .catshop-cart-items {
+    margin-bottom: 10px;
+  }
+  
+  .catshop-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+  
+  .catshop-cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .catshop-cart-qty button {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.15s;
+  }
+  .catshop-cart-qty button:hover {
+    background: #00b894;
+    color: #fff;
+  }
+  
+  .catshop-remove-item {
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .catshop-cart-total {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+  
+  .catshop-checkout {
+    width: 100%;
+    background: #3b77c5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .catshop-checkout:hover {
+    background: #019267;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .catshop-layout {
+      flex-direction: column;
+    }
+    .catshop-sidebar {
+      width: 100%;
+      min-height: auto;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+      position: static;
+      top: unset;
+    }
+    .catshop-main {
+      padding: 24px 8px;
+    }
+    .catshop-cart {
+      right: 10px;
+      bottom: 10px;
+      width: 95vw;
+      min-width: 220px;
+      max-width: 98vw;
+    }
+  }
+  

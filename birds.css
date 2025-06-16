@@ -1,0 +1,228 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f4f8fc;
+    color: #222;
+    margin: 0;
+}
+
+.birdshop-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.birdshop-sidebar {
+    width: 260px;
+    background: #f7f8fa;
+    padding: 32px 24px 24px 32px;
+    border-right: 1px solid #e0e0e0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+.birdshop-sidebar-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #376cb1;
+}
+
+.birdshop-filter-group {
+    margin-bottom: 24px;
+}
+
+.birdshop-filter-option {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.birdshop-filter-checkbox {
+    margin-right: 8px;
+}
+
+.birdshop-main {
+    flex: 1;
+    padding: 40px 48px 48px 48px;
+    box-sizing: border-box;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.birdshop-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    width: 100%;
+}
+
+.birdshop-product-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(55,108,177,0.08);
+    padding: 24px 20px 20px 20px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+}
+
+.birdshop-product-card:hover {
+    box-shadow: 0 6px 24px rgba(55,108,177,0.16);
+    transform: translateY(-3px);
+}
+
+.birdshop-badge-free {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: #376cb1;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 3px 14px;
+    border-radius: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.birdshop-product-img {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    align-self: center;
+}
+
+.birdshop-product-title {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.birdshop-product-price {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 14px 0;
+}
+
+.birdshop-add-to-cart {
+    background: #376cb1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+.birdshop-add-to-cart:hover {
+    background: #1a3667;
+}
+
+/* Cart Styles */
+.birdshop-cart {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(55,108,177,0.15);
+    border-radius: 14px;
+    padding: 22px 20px 18px 20px;
+    width: 320px;
+    z-index: 100;
+    min-height: 120px;
+}
+
+.birdshop-cart h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.birdshop-cart-items {
+    margin-bottom: 10px;
+}
+
+.birdshop-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    gap: 6px;
+}
+
+.birdshop-cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.birdshop-cart-qty button {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.15s;
+}
+.birdshop-cart-qty button:hover {
+    background: #376cb1;
+    color: #fff;
+}
+
+.birdshop-remove-item {
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.birdshop-cart-total {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.birdshop-checkout {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background: #376cb1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+.birdshop-checkout:hover {
+    background: #019267;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .birdshop-layout { flex-direction: column; }
+    .birdshop-sidebar { width: 100%; min-height: auto; border-right: none; border-bottom: 1px solid #e0e0e0; position: static; top: unset; }
+    .birdshop-main { padding: 24px 8px; }
+    .birdshop-cart { right: 10px; bottom: 10px; width: 95vw; min-width: 220px; max-width: 98vw; }
+}

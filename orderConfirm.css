@@ -1,0 +1,114 @@
+
+.order-confirm-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(55,108,177,0.10);
+  padding: 48px 32px 36px 32px;
+  /* max-width: 500px; */
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}
+.order-confirm-icon {
+  font-size: 3.5rem;
+  color: #4fc3f7;
+  margin-bottom: 18px;
+  animation: pop 0.6s cubic-bezier(.4,2,.6,1.2);
+}
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0;}
+  80% { transform: scale(1.2);}
+  100% { transform: scale(1); opacity: 1;}
+}
+.order-confirm-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #376cb1;
+  margin-bottom: 12px;
+}
+.order-confirm-msg {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+.order-id {
+  font-size: 1.05rem;
+  color: #4fc3f7;
+  font-weight: 700;
+  margin-bottom: 26px;
+  letter-spacing: 1px;
+}
+.order-summary-list {
+  text-align: left;
+  margin: 0 auto 24px auto;
+  max-width: 400px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 12px rgba(55,108,177,0.07);
+}
+.order-summary-list h3 {
+  margin-top: 0;
+  color: #376cb1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.order-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.order-summary-item:last-child {
+  margin-bottom: 0;
+}
+.order-summary-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.order-summary-product img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #e0e6f6;
+}
+.order-summary-total {
+  border-top: 1.5px solid #e0e6f6;
+  margin-top: 14px;
+  padding-top: 10px;
+  font-weight: 800;
+  color: #376cb1;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.back-home-btn {
+  background: linear-gradient(90deg, #4fc3f7 0%, #29b6f6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 38px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 22px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(55,108,177,0.09);
+  letter-spacing: 0.5px;
+}
+.back-home-btn:hover {
+  background: linear-gradient(90deg, #29b6f6 0%, #0288d1 100%);
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  .order-confirm-container {
+    padding: 28px 6px;
+  }
+  .order-summary-list {
+    padding: 12px 4px;
+  }
+}
